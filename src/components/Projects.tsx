@@ -56,6 +56,20 @@ export default function Projects() {
       ],
       isTeamProject: true,
       liveUrl: 'https://aau-dhms.vercel.app/'
+    },
+    {
+      id: 'prayer-scheduler',
+      title: 'Kidane Ethiopian Orthodox Prayer Scheduler App',
+      subtitle: 'Mobile App',
+      description: 'A mobile application currently under development that helps Ethiopian Orthodox Tewahedo followers organize daily prayers, schedules, and spiritual resources through a simple and accessible digital platform.',
+      technologies: ['React Native', 'Expo', 'TypeScript'],
+      type: 'Mobile',
+      features: [
+        'Organizes daily prayers and spiritual schedules in one place',
+        'Designed for a simple, accessible, and user-friendly experience',
+        'Role: Frontend Developer, UI/UX Designer & Backend Developer'
+      ],
+      status: 'In Progress'
     }
   ];
 
@@ -107,6 +121,11 @@ export default function Projects() {
                       <span className="text-[10px] font-mono tracking-wider font-semibold text-neutral-500 uppercase bg-[#111111] px-2.5 py-1 rounded-full border border-white/5">
                         {project.type}
                       </span>
+                      {project.status && (
+                        <span className="text-[10px] font-mono tracking-wider font-semibold text-amber-400 uppercase bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
+                          {project.status}
+                        </span>
+                      )}
                     </div>
                   </div>
 

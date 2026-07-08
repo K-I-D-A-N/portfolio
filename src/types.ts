@@ -13,6 +13,7 @@ export interface Project {
   type: 'Mobile' | 'Web';
   features: string[];
   isTeamProject?: boolean;
+  status?: string;
   liveUrl?: string;
   videoUrl?: string;
 }
