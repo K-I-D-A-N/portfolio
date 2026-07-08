@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from "framer-motion";
 import { Skill } from '../types';
-import { Layout, Smartphone, FileCode2, Database } from 'lucide-react';
+import { Layout, Smartphone, FileCode2, Database, Network, Wrench } from 'lucide-react';
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState<'All' | 'Frontend' | 'Mobile' | 'Languages' | 'Backend'>('All');
+  const [activeCategory, setActiveCategory] = useState<'All' | 'Frontend' | 'Mobile' | 'Languages' | 'Backend' | 'Networking' | 'Databases' | 'Tools'>('All');
 
   const skills: Skill[] = [
     { name: 'HTML', percentage: 90, category: 'Frontend' },
@@ -17,6 +17,22 @@ export default function Skills() {
     { name: 'C#', percentage: 75, category: 'Languages' },
     { name: 'PHP', percentage: 80, category: 'Languages' },
     { name: 'Basic Django', percentage: 50, category: 'Backend' },
+    { name: 'TCP/IP', percentage: 80, category: 'Networking' },
+    { name: 'Routing & Switching', percentage: 75, category: 'Networking' },
+    { name: 'VLANs', percentage: 75, category: 'Networking' },
+    { name: 'Subnetting', percentage: 70, category: 'Networking' },
+    { name: 'Cisco Packet Tracer', percentage: 85, category: 'Networking' },
+    { name: 'Basic Network Troubleshooting', percentage: 60, category: 'Networking' },
+    { name: 'PostgreSQL', percentage: 70, category: 'Databases' },
+    { name: 'MySQL', percentage: 75, category: 'Databases' },
+    { name: 'SQL', percentage: 80, category: 'Databases' },
+    { name: 'Git', percentage: 65, category: 'Tools' },
+    { name: 'GitHub', percentage: 75, category: 'Tools' },
+    { name: 'VS Code', percentage: 85, category: 'Tools' },
+    { name: 'Figma', percentage: 70, category: 'Tools' },
+    { name: 'Vercel', percentage: 70, category: 'Tools' },
+    { name: 'Render', percentage: 50, category: 'Tools' },
+    { name: 'npm', percentage: 75, category: 'Tools' },
   ];
 
   const categories = [
@@ -25,6 +41,9 @@ export default function Skills() {
     { id: 'Mobile', label: 'Mobile', icon: Smartphone },
     { id: 'Languages', label: 'Core Languages', icon: FileCode2 },
     { id: 'Backend', label: 'Backend/Frameworks', icon: Database },
+    { id: 'Networking', label: 'Networking', icon: Network },
+    { id: 'Databases', label: 'Databases', icon: Database },
+    { id: 'Tools', label: 'Tools & Tech', icon: Wrench },
   ] as const;
 
   const filteredSkills = activeCategory === 'All'

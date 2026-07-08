@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   percentage: number;
-  category: 'Frontend' | 'Mobile' | 'Languages' | 'Backend';
+  category: 'Frontend' | 'Mobile' | 'Languages' | 'Backend' | 'Networking' | 'Databases' | 'Tools';
 }
 
 export interface Project {
