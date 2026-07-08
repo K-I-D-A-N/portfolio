@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { FileText, ChevronDown } from 'lucide-react';
 import { motion } from "framer-motion";
+import { downloadCvPdf } from '../data/cvData';
+
 interface HeroProps {
   onOpenResume: () => void;
 }
@@ -23,12 +25,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
   };
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Eyerusalem_Habte_CV.pdf';
-    link.setAttribute('download', 'Eyerusalem_Habte_CV.pdf');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    downloadCvPdf();
   };
 
   // Typewriter effect for Name
